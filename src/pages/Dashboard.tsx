@@ -6,6 +6,12 @@ import { CardMenu } from "../components/Dashboard/CardMenu";
 import { CardGanhos } from "../components/Dashboard/CardGanhos";
 import { CardVisaoGeral } from "../components/Dashboard/CardVisaoGeral";
 import { CardNoticias } from "../components/Dashboard/CardNoticias";
+import { CardBitcoin } from "../components/Dashboard/CardBitcoin";
+import { CardWallet } from "../components/Dashboard/CardWallet";
+import { CardAtivos } from "../components/Dashboard/CardAtivo";
+import { Extrato } from "../components/Transacoes/Extrato";
+import { CardExtrato } from "../components/Dashboard/CardExtrato";
+
 
 export type FiiData = {
   id: number;
@@ -35,6 +41,7 @@ export type FiiData = {
   VacanciaFisica: number;
   VacanciaFinanceira: number;
   QuantidadeAtivos: number;
+  slug: string;
 };
 
 export default function Dashboard() {
@@ -59,38 +66,47 @@ export default function Dashboard() {
 
   return (
     <>
-    <div className="h-[140vh] bg-[#13141B]">
-    <Header />
+    <div className="h-[110vh] w-[90%] m-auto bg-[#fff]">
 
-    <div className="m-16 rounded p-16 bg-[#201F25]">
+    <div className="m-0 rounded p-0 bg-[#fff]">
       <div className="container-fluid">
 
       <h1 className="text-white mb-3 text-3xl text-left font-bold">Dashboard</h1>
 
       <div className="row">
 
-          <div className="col-lg-3">
+          <div className="col-lg-2">
             <CardMenu />
           </div>
 
           <div className="col-lg-9">
-            <FiiCards fiiData={fiiData}/>
 
             <div className="row">
 
-              <div className="col-lg-6">
+              <div className="col-lg-8">
+                <CardBitcoin />
+              </div>
+
+
+              <div className="col-lg-4">
+                <CardWallet />
+              </div>
+
+              <div className="col-lg-4">
+              <CardAtivos />
+              </div>
+
+              <div className="col-lg-4">
                 <CardGanhos /> 
               </div>
 
-              <div className="col-lg-6">
-                <CardVisaoGeral />
+              <div className="col-lg-4 mt-4">
+                <CardExtrato/>
               </div>
 
+
             </div>
 
-            <div className="col-lg-12">
-              <CardNoticias />
-            </div>
 
           </div>
 

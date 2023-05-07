@@ -2,3 +2,13 @@
   background-color: red;
   color: #fff;
 }
+
+.passaoMouse {
+  background: black;
+  display: none;
+}
+
+.passaoMouse::hover {
+  display: block !important;
+  background: black !important;
+}

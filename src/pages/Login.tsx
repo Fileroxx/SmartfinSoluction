@@ -34,12 +34,14 @@ export default function Login() {
       <div className="col-lg-6 bg-[#13141B] h-[100vh]">
         <div className="container">
           <div className={styles.centralizar}>
-            <img className="pt-10" src="../../public/logo.png" alt="" />
+            <div className="flex justify-center">
+               <img className="pt-10" src="../../public/logo.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="col-lg-6 bg-[#201F25] h-[100vh]">
+      <div className="col-lg-6 bg-[#fff] h-[100vh]">
         <div className="container">
           <div className={styles.centralizar}>
               <div className="formulario">
@@ -54,7 +56,7 @@ export default function Login() {
                   onChange={(e) => setEmail(e.target.value)}
                   style={{
                     borderRadius: '10px'
-                  }} className="w-[80%] p-2 bg-transparent border border-[#505050]" type="email" id="email" placeholder="Seu email" />
+                  }} className="w-[80%] p-2 bg-transparent border border-[#505050] text-black" type="email" id="email" placeholder="Seu email" />
 
                   <br /><br />
 
@@ -64,7 +66,7 @@ export default function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                   style={{
                     borderRadius: '10px'
-                  }} className="w-[80%] p-2 bg-transparent border border-white" type="password" id="celular" placeholder="Sua senha" />
+                  }} className="w-[80%] p-2 bg-transparent border border-[#505050] text-black" type="password" id="celular" placeholder="Sua senha" />
                   <br /><br />
                   <button type="submit" className="bg-[#2D9BFC] w-[50%] p-2 font-bold" style={
                     {
